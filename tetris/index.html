@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETRIS Benji Edition</title>
+    <link href="tetrisStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div>
+            <a class="linkHome" href="../index.html">Terug naar homepage</a>
+        </div>
+    </header>
+    <canvas id="tetris" style="z-index: 3; margin: 0 auto; display:block;" width="400" height="800"></canvas>
+    <section id="container">
+        <img id="logo" src="logo.png">
+        <div id="info">
+            <p class="infoClass">Current Score:</p>
+            <p class="infoClass" id="scoreHTML">ERROR: Score not loaded.</p>
+            <p class="infoClass">Amount of Tetri:</p>
+            <p class="infoClass" id="tetrisHTML">ERROR: Tetris system not loaded.</p>
+            <p class="infoClass">Level:</p>
+            <p class="infoClass" id="levelHTML">ERROR: Level system not loaded.</p>
+            <p class="infoClass">HI Score:</p>
+            <p class="infoClass" id="HI-HTML">ERROR: HI score system not loaded.</p>
+            <br>
+            <p class="infoClass">Up = Rotate |<br> Down = Move down |<br> Left = Move Left |<br> Right = Move Right |<br> Spacebar = Hard drop</p>
+        </div>
+        <div id="nextB">
+            <h2>NEXT:</h2>
+            <div id="nextBlock"></div>
+        </div>
+        <div id="headsUp">
+            <div id="huTetris">TETRIS!</div>
+            <div id="huLvlUp">LEVEL UP!</div>
+        </div>
+        <button onclick="togglePlay()">BGM</button>
+    </section>
+    <div style="display:none; position:fixed; top:45vh; right:15%; background-color: white; margin:60px; border-radius: 20px;">
+        <h2 style="text-align: center;">HOLD:</h2>
+        <div id="holdBlock" style="background-size:cover; width:150px; height:150px; margin: 20px;"></div>
+    </div>
+    <div id="gameOverBG">
+        <div id="gameOverSRC">
+            <img src="logo.png">
+            <h1>GAME OVER</h1>
+            <p>Thank you for playing!</p>
+            <p>Score:</p>
+            <p id="endHTML">ERROR</p>
+            <button onclick="reloadGame()">Start over</button>
+        </div>
+    </div>
+    <audio id="bgmusic" loop>
+        <source src="theme.mp3">
+    </audio>
+    <audio id="lvlUp">
+        <source src="lvlup.mp3">
+    </audio>
+    <audio id="placeB">
+        <source src="place.mp3">
+    </audio>
+    <audio id="clearL">
+        <source src="clear.mp3">
+    </audio>
+    <audio id="trsC">
+        <source src="tetrica.mp3">
+    </audio>
+    <script src="tetrominoes.js"></script>
+    <script src="tetrisCUSTOM.js"></script>
+    
+</body>
+</html>

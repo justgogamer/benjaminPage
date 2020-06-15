@@ -1,0 +1,204 @@
+#nBar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.705);
+    height: 80px;
+    z-index: 2;
+    animation-duration: 1s;
+}
+
+#nBar h1{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+#name{
+    font-size: 30px;
+}
+
+.title{
+    color: white;
+}
+
+#occ{
+    text-align: right; 
+    font-size:20px;
+}
+
+
+#nBar nav{
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#nBar a{
+    margin-left: 3px;
+    margin-right: 3px;
+    width:80px;
+    font-size: 15px;
+    padding-top:30px;
+    transition: ease 0.1s;
+    text-decoration: none;
+    color: #2d91fc;
+}
+
+#nBar a:hover{
+    background-color:rgba(52, 159, 230, 0.733) ;
+    border-top: 3px solid rgb(154, 245, 162);
+    color: white;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.705);
+    padding: 10px;
+}
+
+footer p{
+    color: white;
+}
+
+.jumbotron{
+    margin-bottom: 10px;
+}
+
+#contact{
+    width:30%;
+    text-align: center;
+}
+
+#contact img{
+    height: 50px;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.opener{
+    padding:13px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+#start{
+    display: flex;
+}
+
+.card-img-top{
+    height:200px;
+}
+
+
+main{
+    padding-top: 150px;
+}
+
+#pf{
+
+    width: 450px;
+    overflow: hidden;
+    animation-duration: 1.5s;
+    margin-left: -90px;
+    margin-top: -90px;
+}
+
+.profile{
+    width:300px;
+    height:300px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 40px;
+    border: 5px rgba(0, 0, 0, 0.705) solid;
+    animation-duration: 1.5s;
+}
+
+p span{
+    color: rgb(52, 159, 230);
+}
+
+progress{
+    width: 80%;
+    color: rgb(52, 159, 230);
+}
+
+.sProg{
+    height: 100px;
+    padding:20px;
+}
+
+.sProg img{
+    height:100%;
+}
+
+.sProg div{
+    width:100%;
+}
+
+#contact div a{
+    margin:30px;
+}
+
+body{
+    background: linear-gradient(321deg, #136a8a, #267871);
+    background-size: 600% 600%;
+
+    -webkit-animation: gradientBG 30s ease infinite;
+    -moz-animation: gradientBG 30s ease infinite;
+    animation: gradientBG 30s ease infinite; 
+}
+
+@-webkit-keyframes gradientBG {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@-moz-keyframes gradientBG {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@keyframes gradientBG {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+
+
+@media only screen and (max-width: 990px){
+
+    #name{
+        font-size: 15px;
+    }
+
+    #occ{
+        font-size: 10px;
+    }
+
+    #start{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile{
+        order: 1;
+        margin: 0px;
+    }
+
+    .opener{
+        order: 2;
+        width: 100%;
+    }
+}
